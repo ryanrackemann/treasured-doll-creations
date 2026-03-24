@@ -13,7 +13,7 @@
         "build": {
           "builder": "@angular-devkit/build-angular:application",
           "options": {
-            "baseHref": "/treasured-doll-creations",
+            "baseHref": "/",
             "outputPath": "dist/treasured-doll-creations",
             "index": "src/index.html",
             "browser": "src/main.ts",
