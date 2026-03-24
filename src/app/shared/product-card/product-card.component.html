@@ -29,14 +29,14 @@
     </div>
 
     <div class="product-card__actions">
-      <a [routerLink]="['/product', product.id]" class="secondary" role="button">View item</a>
+      <a [routerLink]="['/product', product.id]" class="secondary" role="button">View product</a>
       <a
         *ngIf="primaryMarketplace"
         [href]="primaryMarketplace.url"
         target="_blank"
         rel="noreferrer"
         role="button"
-      >View listing</a>
+      >Open marketplace</a>
     </div>
   </div>
 </div>

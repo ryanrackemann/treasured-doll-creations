@@ -9,7 +9,7 @@
 
     <div class="detail-page__message surface-card" *ngIf="errorMessage() as error">
       <p class="eyebrow">Unable to load this item</p>
-      <h1>We could not open the collectible details.</h1>
+      <h1>We could not open this product page.</h1>
       <p>{{ error }}</p>
       <a routerLink="/catalog" role="button">Return to catalog</a>
     </div>
@@ -24,7 +24,7 @@
 
         <div class="detail-page__price-row">
           <strong>{{ product.price | currency: 'USD' : 'symbol' : '1.0-0' }}</strong>
-          <span>Available through external listings</span>
+          <span>Marketplace link available</span>
         </div>
 
         <p>{{ product.description }}</p>
@@ -59,10 +59,10 @@
             target="_blank"
             rel="noreferrer"
             role="button"
-          >View listing on {{ marketplace.label }}</a>
+          >Open listing on {{ marketplace.label }}</a>
         </div>
 
-        <p class="detail-page__note">This website serves as a catalog, so purchases always finish on the selected external marketplace.</p>
+        <p class="detail-page__note">Our products are hosted across multiple marketplaces, so please use the link above to continue.</p>
       </aside>
     </div>
   </div>

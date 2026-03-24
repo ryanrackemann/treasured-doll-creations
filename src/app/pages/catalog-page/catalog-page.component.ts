@@ -96,8 +96,8 @@ export class CatalogPageComponent implements OnInit {
           ? `Catalog Results for "${filters.search}" | Treasured Doll Creations`
           : 'Catalog | Treasured Doll Creations Antique & Vintage Collectibles',
         description: filters.search
-          ? `Browse catalog results for "${filters.search}" across antique and vintage collectibles, heirloom accents, nostalgic decor, and display-ready finds.`
-          : 'Browse the Treasured Doll Creations catalog of antique and vintage collectibles, heirloom accents, nostalgic decor, and display-ready finds.',
+          ? `Review search results for "${filters.search}" in the Treasured Doll Creations catalog of antique and vintage items.`
+          : 'Review the Treasured Doll Creations catalog to find antique and vintage items from a curated collection.',
         path: buildCatalogPath(filters)
       });
     });

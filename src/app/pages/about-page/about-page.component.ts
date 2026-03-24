@@ -11,19 +11,19 @@ interface AboutCard {
 
 const ABOUT_CARDS: AboutCard[] = [
   {
-    title: 'Vintage-first presentation',
+    title: 'Curated collection',
     description:
-      'Imagery, descriptive copy, and supporting details are organized to help visitors evaluate antique and vintage pieces quickly.'
+      'Our catalog includes antique and vintage items selected for style, quality, and interest.'
   },
   {
-    title: 'Catalog-led conversion',
+    title: 'Multiple marketplaces',
     description:
-      'The website is built for browsing and discovery, while each item still links outward to the marketplace where the live listing exists.'
+      'Our products are hosted across multiple marketplaces, so please review the link provided on each product page.'
   },
   {
-    title: 'Simple, scalable architecture',
+    title: 'Simple browsing',
     description:
-      'The Angular app is structured so future API integration and catalog updates can be introduced without rebuilding the browsing flow.'
+      'Use this website to explore more products, review item details, and find the best product for you.'
   }
 ];
 
@@ -43,7 +43,7 @@ export class AboutPageComponent implements OnInit {
     this.seoService.updatePage({
       title: 'About Treasured Doll Creations | Antique & Vintage Collectibles',
       description:
-        'Learn about Treasured Doll Creations and its focus on curated antique and vintage collectibles, heirloom accents, and a catalog-first browsing experience.',
+        'Learn about Treasured Doll Creations, a catalog of antique and vintage items from a curated collection with marketplace links on each product page.',
       path: '/about'
     });
   }

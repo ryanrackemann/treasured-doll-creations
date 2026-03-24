@@ -1,36 +1,36 @@
 <section class="landing-hero">
   <div class="shell landing-hero__grid">
     <div class="landing-hero__copy">
-      <p class="eyebrow">Curated vintage catalog</p>
-      <h1>Antique and vintage collectibles, gathered into one thoughtful catalog.</h1>
-      <p class="landing-hero__lead">Treasured Doll Creations presents antique keepsakes, vintage decor, collectible dolls, wardrobe pieces, and display accents in a calm, image-first browsing experience.</p>
+      <p class="eyebrow">Antique & vintage catalog</p>
+      <h1>Antique and vintage items from a curated collection.</h1>
+      <p class="landing-hero__lead">Thank you for your interest in Treasured Doll Creations. Please review our catalog to find the best product for you.</p>
 
       <form class="landing-search surface-card" (ngSubmit)="submitSearch()">
-        <label for="landing-search-input">Search the catalog</label>
+        <label for="landing-search-input">Search our catalog</label>
         <div class="landing-search__controls">
           <input
             id="landing-search-input"
             name="landingSearch"
             type="search"
-            placeholder="Search vintage decor, dolls, textiles, or display pieces"
+            placeholder="Search dolls, decor, glassware, linens, or collectibles"
             [(ngModel)]="searchTerm"
           >
-          <button type="submit">Search collectibles</button>
+          <button type="submit">Search catalog</button>
         </div>
       </form>
 
       <div class="landing-hero__actions">
-        <a routerLink="/catalog" role="button">Browse the catalog</a>
-        <a routerLink="/about" class="secondary outline" role="button">About the business</a>
+        <a routerLink="/catalog" role="button">View catalog</a>
+        <a routerLink="/about" class="secondary outline" role="button">About Treasured Doll Creations</a>
       </div>
     </div>
 
     <aside class="landing-hero__panel surface-card">
-      <p class="eyebrow">What visitors can do here</p>
+      <p class="eyebrow">Shopping with us</p>
       <ul>
-        <li>Start with a quick overview of the brand and the kinds of pieces it curates.</li>
-        <li>Search from the landing page and arrive in a filtered catalog view.</li>
-        <li>Move into product detail pages before continuing to the live marketplace listing.</li>
+        <li>Antique and vintage items from a curated collection.</li>
+        <li>Use the search bar to find the type of item you want.</li>
+        <li>Open a product page to review the marketplace link and continue shopping.</li>
       </ul>
     </aside>
   </div>
@@ -39,24 +39,24 @@
 <section class="landing-brand">
   <div class="shell">
     <div class="section-heading">
-      <p class="eyebrow">Why this flow works</p>
-      <h2>A clear landing experience helps visitors understand the vintage catalog before they browse.</h2>
+      <p class="eyebrow">Start here</p>
+      <h2>Use the home page to search the collection, open the catalog, or learn more about Treasured Doll Creations.</h2>
     </div>
 
     <div class="landing-brand__grid">
       <div class="landing-brand">
-        <h3>Business-first introduction</h3>
-        <p>New visitors get a concise explanation of Treasured Doll Creations as an antique and vintage collectibles catalog.</p>
+        <h3>Curated collection</h3>
+        <p>Our catalog features antique and vintage items selected from a curated collection.</p>
       </div>
 
       <div class="landing-brand">
-        <h3>Search-led discovery</h3>
-        <p>The landing page search carries people straight into the catalog with their search already applied.</p>
+        <h3>Simple search</h3>
+        <p>Search by keyword and continue to the catalog to see matching products.</p>
       </div>
 
       <div class="landing-brand">
-        <h3>Simple navigation</h3>
-        <p>Clear links to the About and Catalog views make the structure easy to understand on both mobile and desktop.</p>
+        <h3>Marketplace links</h3>
+        <p>Our products are hosted across multiple marketplaces, and each product page includes the link when you are ready to continue.</p>
       </div>
     </div>
   </div>

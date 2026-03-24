@@ -68,13 +68,13 @@ export class ProductDetailPageComponent implements OnInit {
         }
 
         if (!this.errorMessage()) {
-          this.errorMessage.set('This collectible could not be found in the current catalog.');
+          this.errorMessage.set('This product could not be found in the current catalog.');
         }
 
         this.seoService.updatePage({
           title: 'Item Not Found | Treasured Doll Creations',
           description:
-            'The requested antique or vintage item could not be found in the Treasured Doll Creations catalog.',
+            'The product you requested could not be found in the Treasured Doll Creations catalog.',
           path: `/${this.route.snapshot.url.map((segment) => segment.path).join('/')}`,
           robots: 'noindex,follow'
         });

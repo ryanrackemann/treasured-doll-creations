@@ -22,7 +22,7 @@ export class LandingPageComponent implements OnInit {
     this.seoService.updatePage({
       title: 'Treasured Doll Creations | Antique & Vintage Collectibles',
       description:
-        'Explore Treasured Doll Creations, a curated catalog of antique and vintage collectibles, heirloom accents, nostalgic decor, and display-ready finds.',
+        'Antique and vintage items from a curated collection. Review the Treasured Doll Creations catalog to find the best product for you.',
       path: '/'
     });
   }

@@ -1,216 +1,153 @@
-# Treasured Doll Creations Antique & Vintage Collectibles Catalog
+# Treasured Doll Creations
 
-## Overview
+## Brand Overview
 
-The **Treasured Doll Creations Catalog Website** is a digital showcase designed to support and promote antique and vintage collectible items sold by Treasured Doll Creations (TeeDeeCee’s).
+Treasured Doll Creations is a curated online catalog for shoppers who love antique and vintage collectibles. The site is designed to present nostalgic, heirloom-inspired pieces in a way that feels warm, trustworthy, and easy to browse.
 
-This platform serves as a centralized catalog where customers can browse curated inventory and seamlessly navigate to external marketplaces to complete purchases.
-
-The primary goal is to **increase product visibility, streamline discovery, and drive traffic to sales channels** such as eBay, Poshmark, and Depop.
+Rather than functioning as a direct checkout experience, the website serves as a discovery destination where visitors can explore the collection, learn more about the business, and continue to trusted marketplace listings when they are ready to purchase.
 
 ---
 
-## Business Objectives
+## Business Purpose
 
-* Provide a visually engaging catalog of antique and vintage collectible items
-* Improve product discoverability through filtering and structured data
-* Drive conversions by linking directly to active marketplace listings
-* Establish a consistent and professional online presence for the brand
-* Enable easy updates to inventory through a centralized data source
+The website should:
 
----
-
-## Key Features
-
-### Landing Page
-
-* Homepage introduces the company before visitors enter the catalog
-* Includes a search bar that routes users into a filtered catalog view
-* Provides clear entry points to the About view and Catalog view
-
-### Product Catalog
-
-* Organized listing of all available items
-* Clean, image-forward browsing experience
-* Mobile-optimized layout for on-the-go users
-
-### Advanced Filtering
-
-* Users can filter products based on key characteristics (e.g., material, category)
-* Improves user experience and reduces time to find desired items
-
-### Product Detail Pages
-
-Each product includes:
-
-* Title and detailed description
-* Material information (when applicable)
-* Image gallery with lightbox carousel for close inspection
-* Pricing information
-* Direct links to purchase on external marketplaces:
-
-  * eBay
-  * Poshmark
-  * Depop
-
-### Marketplace Integration
-
-* Products are not sold directly on the site
-* The site functions as a **discovery and redirection platform**
-* Ensures flexibility and leverages existing trusted sales platforms
+* Strengthen the Treasured Doll Creations brand as a source for antique and vintage collectibles
+* Make it easier for shoppers to discover items across categories, materials, and styles
+* Increase confidence through clear photography, descriptive product storytelling, and a polished brand presentation
+* Drive qualified traffic to active marketplace listings on platforms such as eBay, Poshmark, and Depop
+* Create a memorable catalog experience that encourages return visits and repeat browsing
 
 ---
 
-## User Experience
+## Target Audience
 
-* **Mobile-first design** ensures accessibility across all devices
-* Simple, intuitive navigation for all age groups
-* Fast-loading, responsive interface
-* Visual emphasis on product imagery to highlight collectible value
+The site is intended for people shopping for:
 
-## HTML Template Guidelines
+* Antique and vintage collectibles
+* Nostalgic display pieces and heirloom accents
+* Vintage dolls, wardrobe pieces, and decorative accessories
+* Gifts for collectors and lovers of timeless, character-rich objects
 
-To reduce unnecessary whitespace nodes in rendered templates, pure text content in HTML should stay on the same line as its wrapping tag.
-
-Bad:
-
-```html
-<p>
-  Here is a bad sample
-</p>
-```
-
-Good:
-
-```html
-<p>Here is a good sample</p>
-```
-
-## SEO Guidelines
-
-The site should follow these SEO best practices as part of normal development:
-
-* Use a unique page title and meta description for every public-facing view
-* Keep heading structure semantic and hierarchical with one clear `h1` per page
-* Prefer descriptive, human-readable routes such as `/about`, `/catalog`, and `/product/:id`
-* Write alt text that describes the collectible or image content meaningfully
-* Maintain internal links between the landing page, about page, catalog, and product detail views
-* Keep performance strong because load speed affects discovery and user retention
-* Add canonical URLs for public pages to reduce duplicate-content ambiguity
-* Use Open Graph and Twitter metadata so shared links remain descriptive and branded
-* Prefer crawlable public content over content that exists only after complex interactions
-* Plan deployment with prerendering or SSR for the public catalog experience when production hosting is set up
-* Generate a production `robots.txt` and sitemap once the live domain and final route structure are known
-* Add structured data only when the underlying product and business details are accurate and stable
+The ideal visitor values craftsmanship, age, story, condition details, and presentation. They are often detail-oriented, visually motivated, and reassured by thoughtful descriptions and clear imagery.
 
 ---
 
-## Technology Overview
+## Brand Positioning
 
-### Frontend
+Treasured Doll Creations should feel:
 
-* Built as a **Single Page Application (SPA)** using Angular
-* Enables fast navigation and a seamless browsing experience
-
-### Data Integration
-
-* Product data is retrieved via API
-* Allows for dynamic updates without requiring site redeployment
-* Supports scalability as inventory grows
+* Curated rather than crowded
+* Nostalgic without feeling outdated
+* Refined, calm, and trustworthy
+* Welcoming to both dedicated collectors and casual vintage shoppers
+* Image-led, with supporting copy that adds confidence and context
 
 ---
 
-## Value to the Business
+## Website Experience
 
-* Centralizes product presentation across multiple marketplaces
-* Reduces reliance on individual platform discovery algorithms
-* Strengthens brand identity and customer trust
-* Provides a foundation for future enhancements (e.g., direct checkout, user accounts, analytics)
+The website should guide shoppers through a simple, clear path:
 
----
+1. Arrive on a landing page that introduces the business and the kinds of pieces offered
+2. Search or browse the catalog to discover relevant antiques and vintage collectibles
+3. Open a product detail view to inspect imagery, pricing, materials, era notes, and condition details
+4. Continue to the live marketplace listing to complete the purchase
 
-## Future Opportunities
-
-* Direct e-commerce integration
-* Inventory management dashboard
-* Customer accounts and wishlists
-* Email marketing and product alerts
-* Analytics and performance tracking
+Every page should reinforce the idea that Treasured Doll Creations is a curated destination for distinctive vintage finds.
 
 ---
 
-## Generated Project
+## Content Priorities
 
-This repository now includes a working Angular SPA starter aligned to the product requirements in `AGENTS.md`.
+The website should emphasize:
 
-### Included in the scaffold
+* Strong, image-first presentation
+* Clear and descriptive product titles
+* Thoughtful product summaries that help shoppers quickly understand style and appeal
+* Detailed descriptions that support trust and purchasing confidence
+* Material, era, and condition details when available
+* Clear marketplace links that make the next step obvious
 
-* Standalone Angular components and lazy-loaded routes
-* Landing page with company summary and search-led navigation into catalog results
-* Dedicated About page with business and browsing context
-* Route-aware SEO metadata service for page titles, descriptions, canonical URLs, and social sharing tags
-* Mobile-first top navigation with a full-screen hamburger menu on small screens
-* Product catalog grid with filtering by search, category, material, and marketplace
-* Product detail pages with image gallery and lightbox controls
-* Service-layer data access with mock API-backed JSON data
-* Pico CSS styling customized to the Treasured Doll Creations palette
+The copy should stay focused on shopper value. It should help visitors imagine how a piece feels, displays, or fits within a collection while still remaining accurate and concise.
 
-### Project Structure
+---
 
-```text
-src/
-  app/
-    core/
-      models/
-      services/
-      tokens/
-      utils/
-    pages/
-      about-page/
-      catalog-page/
-      landing-page/
-      product-detail-page/
-    shared/
-      catalog-filters/
-      loading-spinner/
-      product-card/
-      product-gallery/
-      site-header/
-  assets/
-    data/
-    images/
-```
+## Merchandising Priorities
 
-### Getting Started
+The catalog should be organized to support browsing and discovery across:
 
-```bash
-npm install
-npm start
-```
+* Collectible dolls
+* Wardrobe and accessory pieces
+* Display accents
+* Nostalgic decor
+* Small antique and vintage keepsakes
 
-### Build
+Featured items should feel intentional and editorial, helping shoppers quickly understand the overall taste and identity of the business.
 
-```bash
-npm run build
-```
+---
 
-### Preview The Built App
+## Search Visibility And Content Strategy
 
-Do not open `dist/.../index.html` directly with `file://`. Angular bundles must be served over HTTP.
+The website should follow search-friendly content best practices in a way that supports the business:
 
-```bash
-npm run build
-npm run preview
-```
+* Every public page should have a distinct purpose and a clear message
+* Page titles and descriptions should reflect what shoppers are actually looking for
+* Product copy should use natural antique and vintage terminology rather than vague filler language
+* Category names, product names, and descriptive details should support search discoverability
+* Image alt text should meaningfully describe the collectible or visual content
+* Internal links should connect the landing page, about page, catalog, and product detail views
+* Content should reflect shopper intent, especially for people searching by type, style, material, era, or use
+* The overall site should build trust through clarity, consistency, and strong presentation
 
-Then open `http://127.0.0.1:4173`.
+Search visibility should support the brand by bringing in shoppers who are already interested in antique and vintage collectible merchandise.
 
-### Mock Data Notes
+---
 
-The seeded catalog currently loads from `src/assets/data/products.json`. Replace that data source or the `PRODUCTS_API_URL` provider in `src/app/app.config.ts` when a live API becomes available.
+## Conversion Priorities
 
-### SEO Implementation Notes
+The site should help shoppers feel ready to continue to an external listing by emphasizing:
 
-The app now includes a lightweight SEO service in `src/app/core/services/seo.service.ts` that updates page titles, meta descriptions, canonical URLs, Open Graph tags, Twitter summary tags, and robots directives when needed.
+* Trustworthy presentation
+* Clear navigation
+* Easy browsing and filtering
+* Item-specific detail pages
+* Obvious calls to action
+* Confidence in the authenticity, style, and character of each piece
 
-For stronger SEO in production, plan to prerender or SSR the public-facing pages during deployment.
+Because checkout happens off-site, the website’s role is to make discovery feel curated and convincing.
+
+---
+
+## Brand Voice
+
+Content on the site should sound:
+
+* Warm
+* Knowledgeable
+* Calm
+* Curated
+* Honest
+* Nostalgic, but not overly sentimental
+
+The tone should never feel generic or overly salesy. It should feel like a well-kept vintage shop inviting visitors to browse beautiful, storied pieces.
+
+---
+
+## Future Growth Opportunities
+
+As the business grows, the website can support:
+
+* Featured seasonal collections
+* Curated gift guides
+* Expanded storytelling around special pieces
+* Email capture for returning shoppers
+* Collector-focused editorial content
+* Saved favorites or wishlists
+* Broader marketplace and brand visibility initiatives
+
+---
+
+## Core Standard
+
+The website should always prioritize catalog clarity, brand trust, and conversion support for antique and vintage collectible shoppers.

@@ -3,12 +3,12 @@
     <header class="catalog-page__header surface-card">
       <div>
         <p class="eyebrow">Catalog</p>
-        <h1>Browse the current collection of antique and vintage collectibles.</h1>
-        <p>Use the filter controls to narrow vintage finds, heirloom pieces, decor accents, and collectible details before opening the live listing.</p>
+        <h1>Antique and vintage items from a curated collection.</h1>
+        <p>Please review our catalog to find the best product for you. Open any item to see more details and the marketplace link.</p>
       </div>
 
       <div class="catalog-page__actions">
-        <a routerLink="/" class="secondary outline" role="button">Back to landing page</a>
+        <a routerLink="/" class="secondary outline" role="button">Back to home</a>
         <a routerLink="/about" role="button">About Treasured Doll Creations</a>
       </div>
     </header>
@@ -16,7 +16,7 @@
     <div class="catalog-page__search-summary surface-card" *ngIf="filters().search">
       <p class="eyebrow">Search applied</p>
       <h2>Showing results for "{{ filters().search }}".</h2>
-      <p>Refine the current search with additional filters or clear everything to browse the full catalog.</p>
+      <p>You can continue refining your search or clear the filters to see more products.</p>
       <button type="button" class="secondary outline" (click)="clearFilters()">Clear filters</button>
     </div>
 
@@ -35,13 +35,13 @@
 
     <div class="catalog-page__message surface-card" *ngIf="errorMessage() as error">
       <p class="eyebrow">Unable to load inventory</p>
-      <h2>The catalog could not be retrieved.</h2>
+      <h2>We could not load the catalog right now.</h2>
       <p>{{ error }}</p>
       <button type="button" (click)="reload()">Try again</button>
     </div>
 
     <div class="catalog-page__summary" *ngIf="!isLoading() && !errorMessage()">
-      <p>{{ filteredProducts().length }} of {{ products().length }} catalog items shown</p>
+      <p>{{ filteredProducts().length }} of {{ products().length }} products shown</p>
       <p *ngIf="activeFilterCount()">{{ activeFilterCount() }} active filter(s)</p>
     </div>
 
@@ -58,8 +58,8 @@
     <ng-template #emptyState>
       <div class="catalog-page__message surface-card" *ngIf="!isLoading() && !errorMessage()">
         <p class="eyebrow">No matches yet</p>
-        <h2>Try broadening the filters.</h2>
-        <p>Adjust the search criteria or reset the filters to reveal more antique and vintage pieces.</p>
+        <h2>No products match this search.</h2>
+        <p>Please try a different search or clear the filters to view more products.</p>
         <button type="button" (click)="clearFilters()">Reset filters</button>
       </div>
     </ng-template>
