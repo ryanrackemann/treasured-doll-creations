@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Velvet Parlor Bear Detail</title>
+  <desc id="desc">Close-up placeholder illustration for the bear bow and seam details.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f4ede7" />
+      <stop offset="100%" stop-color="#cab7a7" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)" />
+  <rect x="78" y="78" width="644" height="844" rx="42" fill="#fffaf4" stroke="#d4c6b9" stroke-width="4" />
+  <circle cx="400" cy="300" r="112" fill="#b18b68" />
+  <path d="M298 454h204l-48 66H346l-48-66Z" fill="#847d63" />
+  <ellipse cx="400" cy="650" rx="170" ry="120" fill="#b18b68" />
+  <text x="108" y="168" fill="#847d63" font-size="28" font-family="Trebuchet MS, sans-serif" letter-spacing="5">BOW AND SEAM DETAIL</text>
+  <text x="108" y="832" fill="#192021" font-size="56" font-family="Georgia, serif">Velvet Parlor Bear</text>
+  <text x="108" y="882" fill="#5c645d" font-size="28" font-family="Trebuchet MS, sans-serif">Collector close-up view</text>
+</svg>

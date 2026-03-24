@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Rose Heirloom Porcelain Doll Detail</title>
+  <desc id="desc">Close-up placeholder illustration highlighting costume details for the porcelain doll.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6ece7" />
+      <stop offset="100%" stop-color="#e0cfc5" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)" />
+  <rect x="78" y="78" width="644" height="844" rx="42" fill="#fffaf4" stroke="#dccdbf" stroke-width="4" />
+  <circle cx="400" cy="280" r="72" fill="#f2ddd4" />
+  <path d="M286 398c46-36 84-54 114-54s68 18 114 54l-34 100H320l-34-100Z" fill="#d7a7a0" />
+  <path d="M252 530c52-16 101-24 148-24s96 8 148 24v160H252V530Z" fill="#f3e7e0" />
+  <circle cx="400" cy="552" r="42" fill="#fff6f3" stroke="#d7a7a0" stroke-width="6" />
+  <text x="108" y="168" fill="#847d63" font-size="28" font-family="Trebuchet MS, sans-serif" letter-spacing="5">LACE AND COSTUME DETAIL</text>
+  <text x="108" y="832" fill="#192021" font-size="56" font-family="Georgia, serif">Rose Heirloom</text>
+  <text x="108" y="882" fill="#5c645d" font-size="28" font-family="Trebuchet MS, sans-serif">Close-up wardrobe view</text>
+</svg>

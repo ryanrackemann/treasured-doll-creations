@@ -1,0 +1,20 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Velvet Parlor Bear</title>
+  <desc id="desc">Warm-toned mohair companion placeholder illustration.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#efe6de" />
+      <stop offset="100%" stop-color="#b79f8a" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)" />
+  <rect x="78" y="78" width="644" height="844" rx="42" fill="#fffaf4" stroke="#d8cab9" stroke-width="4" />
+  <circle cx="320" cy="300" r="54" fill="#9a7a5d" />
+  <circle cx="480" cy="300" r="54" fill="#9a7a5d" />
+  <circle cx="400" cy="360" r="122" fill="#b08a67" />
+  <ellipse cx="400" cy="620" rx="150" ry="170" fill="#b08a67" />
+  <path d="M330 466h140l-70 54-70-54Z" fill="#847d63" />
+  <text x="108" y="168" fill="#847d63" font-size="28" font-family="Trebuchet MS, sans-serif" letter-spacing="5">COMPANION PIECE</text>
+  <text x="108" y="832" fill="#192021" font-size="56" font-family="Georgia, serif">Velvet Parlor Bear</text>
+  <text x="108" y="882" fill="#5c645d" font-size="28" font-family="Trebuchet MS, sans-serif">Mohair display portrait</text>
+</svg>

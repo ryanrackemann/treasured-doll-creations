@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Miniature Trousseau Set</title>
+  <desc id="desc">Grouped linen set placeholder illustration for collector display.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f1eee7" />
+      <stop offset="100%" stop-color="#cec7b8" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)" />
+  <rect x="78" y="78" width="644" height="844" rx="42" fill="#fffaf4" stroke="#d8d2c4" stroke-width="4" />
+  <rect x="220" y="320" width="360" height="250" rx="30" fill="#efe7da" stroke="#bdae9c" stroke-width="8" />
+  <rect x="258" y="356" width="132" height="82" rx="18" fill="#fffdfa" />
+  <rect x="410" y="356" width="132" height="82" rx="18" fill="#fffdfa" />
+  <rect x="258" y="456" width="284" height="72" rx="18" fill="#fffdfa" />
+  <text x="108" y="168" fill="#847d63" font-size="28" font-family="Trebuchet MS, sans-serif" letter-spacing="5">COLLECTOR SET</text>
+  <text x="108" y="832" fill="#192021" font-size="56" font-family="Georgia, serif">Miniature Trousseau Set</text>
+  <text x="108" y="882" fill="#5c645d" font-size="28" font-family="Trebuchet MS, sans-serif">Folded linens and keepsake box</text>
+</svg>

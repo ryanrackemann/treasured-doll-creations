@@ -1,0 +1,95 @@
+.detail-page__stack {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.detail-page__back {
+  width: fit-content;
+}
+
+.detail-page__layout {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.detail-page__summary,
+.detail-page__message {
+  display: grid;
+  gap: 1rem;
+  padding: 1.3rem;
+}
+
+.detail-page__summary h1,
+.detail-page__message h1 {
+  margin-bottom: 0;
+}
+
+.detail-page__lede,
+.detail-page__note {
+  margin-bottom: 0;
+}
+
+.detail-page__price-row {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  gap: 0.75rem;
+  align-items: center;
+}
+
+.detail-page__price-row strong {
+  font-size: clamp(1.9rem, 6vw, 2.8rem);
+  line-height: 1;
+}
+
+.detail-page__price-row span,
+.detail-page__note {
+  color: rgba(25, 32, 33, 0.72);
+}
+
+.detail-page__facts {
+  display: grid;
+  gap: 0.8rem;
+  margin: 0;
+}
+
+.detail-page__facts div {
+  display: grid;
+  gap: 0.15rem;
+  padding-top: 0.8rem;
+  border-top: 1px solid rgba(25, 32, 33, 0.08);
+}
+
+.detail-page__facts dt {
+  font-weight: 700;
+}
+
+.detail-page__facts dd {
+  margin: 0;
+}
+
+.detail-page__tags,
+.detail-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.detail-page__tags span {
+  padding: 0.45rem 0.8rem;
+  border-radius: 999px;
+  background: rgba(148, 158, 148, 0.14);
+  font-size: 0.9rem;
+}
+
+@media (min-width: 768px) {
+  .detail-page__layout {
+    grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.95fr);
+    align-items: start;
+  }
+
+  .detail-page__summary {
+    position: sticky;
+    top: 6rem;
+  }
+}

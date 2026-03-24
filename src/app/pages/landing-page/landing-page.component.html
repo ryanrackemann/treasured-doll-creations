@@ -1,0 +1,62 @@
+<section class="landing-hero">
+  <div class="shell landing-hero__grid">
+    <div class="landing-hero__copy">
+      <h1>Curated collectible inventory with a simpler path from discovery to marketplace checkout.</h1>
+      <p class="landing-hero__lead">Treasured Doll Creations showcases antique dolls, wardrobe pieces, and display accents in one image-first experience so collectors can browse with confidence before heading to the active marketplace listing.</p>
+
+      <form class="landing-search surface-card" (ngSubmit)="submitSearch()">
+        <label for="landing-search-input">Search the catalog</label>
+        <div class="landing-search__controls">
+          <input
+            id="landing-search-input"
+            name="landingSearch"
+            type="search"
+            placeholder="Search dolls, accessories, materials, or styles"
+            [(ngModel)]="searchTerm"
+          >
+          <button type="submit">Search catalog</button>
+        </div>
+      </form>
+
+      <div class="landing-hero__actions">
+        <a routerLink="/catalog" role="button">Open catalog</a>
+        <a routerLink="/about" class="secondary outline" role="button">About the company</a>
+      </div>
+    </div>
+
+    <aside class="landing-hero__panel surface-card">
+      <p class="eyebrow">What visitors can do here</p>
+      <ul>
+        <li>Start from a welcoming summary instead of dropping directly into inventory.</li>
+        <li>Search the collection from the landing page and arrive in a filtered catalog view.</li>
+        <li>Learn more about the brand before deciding which collectible to explore next.</li>
+      </ul>
+    </aside>
+  </div>
+</section>
+
+<section class="landing-brand">
+  <div class="shell">
+    <div class="section-heading">
+      <p class="eyebrow">Why this flow works</p>
+      <h2>A clear landing experience helps visitors understand the brand before they browse.</h2>
+    </div>
+
+    <div class="landing-brand__grid">
+      <div class="landing-brand">
+        <h3>Brand-first introduction</h3>
+        <p>New visitors get a concise explanation of what Treasured Doll Creations offers and how the catalog supports marketplace sales.</p>
+      </div>
+
+      <div class="landing-brand">
+        <h3>Search-led discovery</h3>
+        <p>The landing page search carries people straight into the catalog with their search already applied, reducing friction.</p>
+      </div>
+
+      <div class="landing-brand">
+        <h3>Simple navigation</h3>
+        <p>Clear links to the About and Catalog views make the site structure easy to understand on both mobile and desktop.</p>
+      </div>
+    </div>
+  </div>
+</section>

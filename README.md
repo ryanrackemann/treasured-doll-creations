@@ -22,6 +22,12 @@ The primary goal is to **increase product visibility, streamline discovery, and 
 
 ## Key Features
 
+### Landing Page
+
+* Homepage introduces the company before visitors enter the catalog
+* Includes a search bar that routes users into a filtered catalog view
+* Provides clear entry points to the About view and Catalog view
+
 ### Product Catalog
 
 * Organized listing of all available items
@@ -95,3 +101,74 @@ Each product includes:
 * Customer accounts and wishlists
 * Email marketing and product alerts
 * Analytics and performance tracking
+
+---
+
+## Generated Project
+
+This repository now includes a working Angular SPA starter aligned to the product requirements in `AGENTS.md`.
+
+### Included in the scaffold
+
+* Standalone Angular components and lazy-loaded routes
+* Landing page with company summary and search-led navigation into catalog results
+* Dedicated About page with business and browsing context
+* Mobile-first top navigation with a full-screen hamburger menu on small screens
+* Product catalog grid with filtering by search, category, material, and marketplace
+* Product detail pages with image gallery and lightbox controls
+* Service-layer data access with mock API-backed JSON data
+* Pico CSS styling customized to the Treasured Doll Creations palette
+
+### Project Structure
+
+```text
+src/
+  app/
+    core/
+      models/
+      services/
+      tokens/
+      utils/
+    pages/
+      about-page/
+      catalog-page/
+      landing-page/
+      product-detail-page/
+    shared/
+      catalog-filters/
+      loading-spinner/
+      product-card/
+      product-gallery/
+      site-header/
+  assets/
+    data/
+    images/
+```
+
+### Getting Started
+
+```bash
+npm install
+npm start
+```
+
+### Build
+
+```bash
+npm run build
+```
+
+### Preview The Built App
+
+Do not open `dist/.../index.html` directly with `file://`. Angular bundles must be served over HTTP.
+
+```bash
+npm run build
+npm run preview
+```
+
+Then open `http://127.0.0.1:4173`.
+
+### Mock Data Notes
+
+The seeded catalog currently loads from `src/assets/data/products.json`. Replace that data source or the `PRODUCTS_API_URL` provider in `src/app/app.config.ts` when a live API becomes available.

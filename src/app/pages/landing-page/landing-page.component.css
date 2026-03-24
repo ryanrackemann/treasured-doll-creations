@@ -1,0 +1,71 @@
+.landing-hero__grid,
+.landing-brand__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.landing-hero__copy {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.landing-hero__lead,
+.landing-brand p {
+  margin-bottom: 0;
+}
+
+.landing-search,
+.landing-hero__panel,
+.landing-brand {
+  padding: 1.4rem;
+}
+
+.landing-search {
+  display: grid;
+  gap: 0.8rem;
+}
+
+.landing-search label {
+  margin-bottom: 0;
+  font-weight: 700;
+}
+
+.landing-search__controls {
+  display: grid;
+  gap: 0.85rem;
+}
+
+.landing-search__controls input,
+.landing-search__controls button {
+  margin: 0;
+}
+
+.landing-hero__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+.landing-hero__panel ul {
+  margin-bottom: 0;
+}
+
+.landing-brand__grid {
+  grid-template-columns: 1fr;
+}
+
+@media (min-width: 768px) {
+  .landing-hero__grid {
+    grid-template-columns: minmax(0, 1.2fr) minmax(20rem, 0.85fr);
+    align-items: center;
+  }
+
+  .landing-search__controls {
+    grid-template-columns: minmax(0, 1fr) auto;
+    align-items: center;
+  }
+
+  .landing-brand__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

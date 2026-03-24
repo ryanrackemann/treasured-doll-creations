@@ -1,0 +1,49 @@
+<header class="site-header" id="top">
+  <div class="shell site-header__bar">
+    <a class="brand" routerLink="/" (click)="closeMenu()">
+      <span class="brand__mark" aria-hidden="true">TDC</span>
+      <span class="brand__copy">
+        <strong>Treasured Doll Creations</strong>
+        <small>Collector catalog</small>
+      </span>
+    </a>
+
+    <nav class="site-nav site-nav--desktop" aria-label="Primary">
+      <a *ngFor="let link of navLinks" [routerLink]="link.path" [fragment]="link.fragment">
+        {{ link.label }}
+      </a>
+    </nav>
+
+    <button
+      class="menu-toggle"
+      type="button"
+      aria-controls="mobile-nav"
+      [attr.aria-expanded]="menuOpen()"
+      (click)="toggleMenu()"
+    >
+      <span class="visually-hidden">Toggle navigation</span>
+      {{ menuOpen() ? 'Close' : 'Menu' }}
+    </button>
+  </div>
+</header>
+
+<div class="mobile-nav" [class.is-open]="menuOpen()" [attr.aria-hidden]="!menuOpen()">
+  <div class="mobile-nav__scrim" (click)="closeMenu()"></div>
+  <div class="mobile-nav__panel">
+    <p class="eyebrow">Navigate the collection</p>
+    <nav id="mobile-nav" class="mobile-nav__links" aria-label="Mobile primary">
+      <a
+        *ngFor="let link of navLinks"
+        [routerLink]="link.path"
+        [fragment]="link.fragment"
+        (click)="closeMenu()"
+      >
+        {{ link.label }}
+      </a>
+    </nav>
+    <p class="mobile-nav__note">
+      Start with the landing page, learn more about the brand, or head straight into the
+      catalog when you are ready to browse.
+    </p>
+  </div>
+</div>

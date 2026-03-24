@@ -1,0 +1,44 @@
+<div class="product-card surface-card">
+  <a
+    class="product-card__image-link"
+    [routerLink]="['/product', product.id]"
+    [attr.aria-label]="'View details for ' + product.title"
+  >
+    <img [src]="product.images[0]" [alt]="product.title" loading="lazy">
+  </a>
+
+  <div class="product-card__body">
+    <div class="product-card__topline">
+      <p class="eyebrow">{{ product.category }}</p>
+      <strong>{{ product.price | currency: 'USD' : 'symbol' : '1.0-0' }}</strong>
+    </div>
+
+    <h3>
+      <a [routerLink]="['/product', product.id]">{{ product.title }}</a>
+    </h3>
+
+    <p class="product-card__description">{{ product.shortDescription }}</p>
+
+    <ul class="product-card__details">
+      <li>{{ product.material || 'Mixed materials' }}</li>
+      <li>{{ product.condition }}</li>
+    </ul>
+
+    <div class="product-card__marketplaces" *ngIf="marketplaces.length">
+      <span *ngFor="let marketplace of marketplaces">{{ marketplace.label }}</span>
+    </div>
+
+    <div class="product-card__actions">
+      <a [routerLink]="['/product', product.id]" class="secondary" role="button">View details</a>
+      <a
+        *ngIf="primaryMarketplace"
+        [href]="primaryMarketplace.url"
+        target="_blank"
+        rel="noreferrer"
+        role="button"
+      >
+        Shop {{ primaryMarketplace.label }}
+      </a>
+    </div>
+  </div>
+</div>

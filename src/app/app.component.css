@@ -1,0 +1,38 @@
+:host {
+  display: block;
+}
+
+.site-main {
+  display: block;
+}
+
+.site-footer {
+  padding: 0 0 3rem;
+}
+
+.site-footer__content {
+  display: grid;
+  gap: 1.5rem;
+  padding: 1.5rem;
+  border: 1px solid rgba(25, 32, 33, 0.12);
+  border-radius: 1.5rem;
+  background: rgba(255, 251, 247, 0.82);
+  box-shadow: 0 20px 50px rgba(25, 32, 33, 0.08);
+}
+
+.site-footer__content p {
+  margin-bottom: 0;
+}
+
+.site-footer__meta {
+  display: grid;
+  gap: 0.85rem;
+}
+
+@media (min-width: 768px) {
+  .site-footer__content {
+    grid-template-columns: minmax(0, 1.2fr) minmax(0, 0.9fr);
+    align-items: start;
+    padding: 2rem;
+  }
+}

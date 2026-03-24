@@ -1,0 +1,70 @@
+<section class="catalog-page" id="catalog-top">
+  <div class="shell catalog-page__stack">
+    <header class="catalog-page__header surface-card">
+      <div>
+        <p class="eyebrow">Catalog</p>
+        <h1>Browse the current collection of dolls, accessories, and display pieces.</h1>
+        <p>
+          Use the filter controls to narrow the catalog, then open an item to inspect details and
+          continue to the live marketplace listing.
+        </p>
+      </div>
+
+      <div class="catalog-page__actions">
+        <a routerLink="/" class="secondary outline" role="button">Back to landing page</a>
+        <a routerLink="/about" role="button">About Treasured Doll Creations</a>
+      </div>
+    </header>
+
+    <div class="catalog-page__search-summary surface-card" *ngIf="filters().search">
+      <p class="eyebrow">Search applied</p>
+      <h2>Showing results for "{{ filters().search }}".</h2>
+      <p>Refine the current search with additional filters or clear everything to browse all items.</p>
+      <button type="button" class="secondary outline" (click)="clearFilters()">Clear filters</button>
+    </div>
+
+    <app-catalog-filters
+      *ngIf="!errorMessage()"
+      [filters]="filters()"
+      [categories]="categoryOptions()"
+      [materials]="materialOptions()"
+      (filterChange)="updateFilters($event)"
+    ></app-catalog-filters>
+
+    <app-loading-spinner
+      *ngIf="isLoading()"
+      label="Loading the collection"
+    ></app-loading-spinner>
+
+    <div class="catalog-page__message surface-card" *ngIf="errorMessage() as error">
+      <p class="eyebrow">Unable to load inventory</p>
+      <h2>The catalog could not be retrieved.</h2>
+      <p>{{ error }}</p>
+      <button type="button" (click)="reload()">Try again</button>
+    </div>
+
+    <div class="catalog-page__summary" *ngIf="!isLoading() && !errorMessage()">
+      <p>{{ filteredProducts().length }} of {{ products().length }} collectibles shown</p>
+      <p *ngIf="activeFilterCount()">{{ activeFilterCount() }} active filter(s)</p>
+    </div>
+
+    <div
+      class="product-grid"
+      *ngIf="!isLoading() && !errorMessage() && filteredProducts().length; else emptyState"
+    >
+      <app-product-card
+        *ngFor="let product of filteredProducts(); trackBy: trackByProductId"
+        [product]="product"
+      ></app-product-card>
+    </div>
+
+    <ng-template #emptyState>
+      <div class="catalog-page__message surface-card" *ngIf="!isLoading() && !errorMessage()">
+        <p class="eyebrow">No matches yet</p>
+        <h2>Try broadening the filters.</h2>
+        <p>Adjust the search criteria or reset the filters to reveal more collectibles.</p>
+        <button type="button" (click)="clearFilters()">Reset filters</button>
+      </div>
+    </ng-template>
+  </div>
+</section>

@@ -1,0 +1,74 @@
+<section class="detail-page">
+  <div class="shell detail-page__stack">
+    <a routerLink="/catalog" class="detail-page__back">Back to catalog</a>
+
+    <app-loading-spinner
+      *ngIf="isLoading()"
+      label="Loading collectible details"
+    ></app-loading-spinner>
+
+    <div class="detail-page__message surface-card" *ngIf="errorMessage() as error">
+      <p class="eyebrow">Unable to load this item</p>
+      <h1>We could not open the collectible details.</h1>
+      <p>{{ error }}</p>
+      <a routerLink="/catalog" role="button">Return to catalog</a>
+    </div>
+
+    <div class="detail-page__layout" *ngIf="product() as product">
+      <app-product-gallery [product]="product"></app-product-gallery>
+
+      <aside class="detail-page__summary surface-card">
+        <p class="eyebrow">{{ product.category }}</p>
+        <h1>{{ product.title }}</h1>
+        <p class="detail-page__lede">{{ product.shortDescription }}</p>
+
+        <div class="detail-page__price-row">
+          <strong>{{ product.price | currency: 'USD' : 'symbol' : '1.0-0' }}</strong>
+          <span>Completed on external marketplaces</span>
+        </div>
+
+        <p>{{ product.description }}</p>
+
+        <dl class="detail-page__facts">
+          <div>
+            <dt>Material</dt>
+            <dd>{{ product.material || 'Mixed materials' }}</dd>
+          </div>
+          <div>
+            <dt>Condition</dt>
+            <dd>{{ product.condition }}</dd>
+          </div>
+          <div>
+            <dt>Era</dt>
+            <dd>{{ product.era || 'Vintage' }}</dd>
+          </div>
+          <div>
+            <dt>Dimensions</dt>
+            <dd>{{ product.dimensions || 'Available upon request' }}</dd>
+          </div>
+        </dl>
+
+        <div class="detail-page__tags" *ngIf="product.tags.length">
+          <span *ngFor="let tag of product.tags">{{ tag }}</span>
+        </div>
+
+        <div class="detail-page__actions">
+          <a
+            *ngFor="let marketplace of marketplaceEntries()"
+            [href]="marketplace.url"
+            target="_blank"
+            rel="noreferrer"
+            role="button"
+          >
+            View on {{ marketplace.label }}
+          </a>
+        </div>
+
+        <p class="detail-page__note">
+          This site is a discovery layer only, so checkout always finishes on the chosen
+          marketplace.
+        </p>
+      </aside>
+    </div>
+  </div>
+</section>

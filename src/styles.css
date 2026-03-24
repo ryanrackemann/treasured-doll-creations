@@ -1,0 +1,147 @@
+/* You can add global styles to this file, and also import other style files */
+:root {
+  --ink-950: #192021 !important;
+  --sage-500: #949e94 !important;
+  --taupe-600: #847d63 !important;
+  --rose-400: #bdae9c !important;
+  --cream-100: #f7f2eb !important;
+  --cream-200: #efe7dd !important;
+  --pico-font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif !important;
+  --pico-font-size: 100% !important;
+  --pico-line-height: 1.6 !important;
+  --pico-border-radius: 1.15rem !important;
+  --pico-color: var(--ink-950) !important;
+  --pico-primary: var(--ink-950) !important;
+  --pico-primary-hover: #2a3536 !important;
+  --pico-primary-focus: rgba(25, 32, 33, 0.22) !important;
+  --pico-secondary: var(--taupe-600) !important;
+  --pico-secondary-hover: #6e684f !important;
+  --pico-secondary-focus: rgba(132, 125, 99, 0.18) !important;
+  --pico-form-element-border-color: rgba(25, 32, 33, 0.12) !important;
+  --pico-form-element-background-color: rgba(255, 255, 255, 0.78) !important;
+  --pico-form-element-active-background-color: var(--cream-100) !important;
+  --pico-card-background-color: rgba(255, 251, 247, 0.82) !important;
+}
+
+h1, h2 {
+  --pico-typography-spacing-top: 2rem !important;
+}
+
+html {
+  scroll-behavior: smooth;
+  background: var(--cream-100);
+}
+
+body {
+  min-height: 100vh;
+  margin: 0;
+  color: var(--ink-950);
+  background:
+    radial-gradient(circle at top left, rgba(189, 174, 156, 0.32), transparent 28%),
+    radial-gradient(circle at 90% 10%, rgba(148, 158, 148, 0.26), transparent 22%),
+    linear-gradient(180deg, #fbf6ef 0%, var(--cream-200) 100%);
+}
+
+body::before {
+  content: '';
+  position: fixed;
+  inset: 0;
+  background:
+    linear-gradient(rgba(255, 255, 255, 0.22) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 255, 255, 0.16) 1px, transparent 1px);
+  background-size: 60px 60px;
+  opacity: 0.22;
+  pointer-events: none;
+}
+
+main,
+header,
+footer {
+  padding-top: 2rem;
+  position: relative;
+  z-index: 1;
+}
+
+h1,
+h2,
+h3,
+h4 {
+  font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
+  letter-spacing: -0.03em;
+  color: var(--ink-950);
+}
+
+p,
+a,
+button,
+label,
+input,
+select,
+small,
+span,
+li,
+dd,
+dt {
+  font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
+}
+
+img {
+  display: block;
+  max-width: 100%;
+}
+
+.shell {
+  width: min(1120px, calc(100% - 1.5rem));
+  margin-inline: auto;
+}
+
+.eyebrow {
+  margin-bottom: 0.55rem;
+  color: var(--taupe-600);
+  text-transform: uppercase;
+  letter-spacing: 0.14em;
+  font-size: 0.78rem;
+  font-weight: 700;
+}
+
+.section-heading {
+  display: grid;
+  gap: 0.55rem;
+  margin-bottom: 1.4rem;
+}
+
+.section-heading > * {
+  margin-bottom: 0;
+}
+
+.surface-card {
+  border: 1px solid rgba(25, 32, 33, 0.1);
+  border-radius: 1.5rem;
+  background: rgba(255, 251, 247, 0.8);
+  box-shadow: 0 18px 55px rgba(25, 32, 33, 0.08);
+  backdrop-filter: blur(12px);
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+[role='button'],
+button {
+  border-radius: 999px;
+}
+
+@media (min-width: 768px) {
+
+  .shell {
+    width: min(1180px, calc(100% - 4rem));
+  }
+}

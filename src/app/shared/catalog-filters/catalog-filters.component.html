@@ -1,0 +1,62 @@
+<div class="filters-panel surface-card">
+  <div class="filters-panel__header">
+    <div>
+      <p class="eyebrow">Filter the catalog</p>
+    </div>
+    <button
+      type="button"
+      class="secondary outline"
+      (click)="reset()"
+      [disabled]="!hasActiveFilters"
+    >
+      Clear filters
+    </button>
+  </div>
+  
+  <label>
+    Search
+    <input
+      type="search"
+      placeholder="Search by title or description"
+      [ngModel]="draftFilters.search"
+      (ngModelChange)="updateFilters({ search: $event })"
+    >
+  </label>
+
+  <div class="filters-grid">
+
+    <label>
+      Category
+      <select
+        [ngModel]="draftFilters.category"
+        (ngModelChange)="updateFilters({ category: $event })"
+      >
+        <option value="all">All categories</option>
+        <option *ngFor="let category of categories" [value]="category">{{ category }}</option>
+      </select>
+    </label>
+
+    <label>
+      Material
+      <select
+        [ngModel]="draftFilters.material"
+        (ngModelChange)="updateFilters({ material: $event })"
+      >
+        <option value="all">All materials</option>
+        <option *ngFor="let material of materials" [value]="material">{{ material }}</option>
+      </select>
+    </label>
+
+    <label>
+      Marketplace
+      <select
+        [ngModel]="draftFilters.marketplace"
+        (ngModelChange)="updateFilters({ marketplace: $event })"
+      >
+        <option *ngFor="let option of marketplaceOptions" [value]="option.value">
+          {{ option.label }}
+        </option>
+      </select>
+    </label>
+  </div>
+</div>

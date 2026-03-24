@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Rose Heirloom Porcelain Doll</title>
+  <desc id="desc">Rose-toned portrait illustration used as placeholder catalog art for a porcelain doll.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8ede6" />
+      <stop offset="100%" stop-color="#cfb8a8" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)" />
+  <rect x="78" y="78" width="644" height="844" rx="42" fill="#fffaf4" stroke="#dbc8ba" stroke-width="4" />
+  <circle cx="400" cy="305" r="78" fill="#f2ddd4" />
+  <path d="M314 438c20-72 78-112 86-112s66 40 86 112l24 150H290l24-150Z" fill="#d4a09a" />
+  <path d="M272 606c44-34 89-50 128-50s84 16 128 50l-34 160H306l-34-160Z" fill="#f0ded7" />
+  <text x="108" y="168" fill="#847d63" font-size="28" font-family="Trebuchet MS, sans-serif" letter-spacing="5">PORCELAIN DOLL</text>
+  <text x="108" y="832" fill="#192021" font-size="56" font-family="Georgia, serif">Rose Heirloom</text>
+  <text x="108" y="882" fill="#5c645d" font-size="28" font-family="Trebuchet MS, sans-serif">Front portrait placeholder</text>
+</svg>

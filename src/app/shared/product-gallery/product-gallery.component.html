@@ -1,0 +1,51 @@
+<div class="gallery">
+  <div class="gallery__frame surface-card">
+    <button
+      type="button"
+      class="gallery__main-button"
+      [attr.aria-label]="'Open image gallery for ' + product.title"
+      (click)="openLightbox()"
+    >
+      <img [src]="activeImage" [alt]="product.title">
+    </button>
+
+    <div class="gallery__controls" *ngIf="product.images.length > 1">
+      <button type="button" class="secondary outline" (click)="move(-1)">Previous</button>
+      <span>{{ activeIndex() + 1 }} / {{ product.images.length }}</span>
+      <button type="button" class="secondary outline" (click)="move(1)">Next</button>
+    </div>
+  </div>
+
+  <div class="gallery__thumbs" *ngIf="product.images.length > 1">
+    <button
+      *ngFor="let image of product.images; let index = index"
+      type="button"
+      [class.is-active]="index === activeIndex()"
+      [attr.aria-label]="'View image ' + (index + 1)"
+      (click)="select(index)"
+    >
+      <img [src]="image" [alt]="product.title + ' image ' + (index + 1)">
+    </button>
+  </div>
+</div>
+
+<div class="lightbox" *ngIf="lightboxOpen()" (click)="closeLightbox()">
+  <div
+    class="lightbox__dialog"
+    role="dialog"
+    aria-modal="true"
+    [attr.aria-label]="product.title + ' image gallery'"
+    (click)="$event.stopPropagation()"
+  >
+    <div class="lightbox__toolbar">
+      <p>{{ product.title }}</p>
+      <button type="button" class="secondary" (click)="closeLightbox()">Close</button>
+    </div>
+
+    <div class="lightbox__content">
+      <button type="button" class="secondary outline" (click)="move(-1)">Previous</button>
+      <img [src]="activeImage" [alt]="product.title">
+      <button type="button" class="secondary outline" (click)="move(1)">Next</button>
+    </div>
+  </div>
+</div>

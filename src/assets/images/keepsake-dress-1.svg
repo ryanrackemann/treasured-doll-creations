@@ -1,0 +1,18 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Satin Keepsake Dress</title>
+  <desc id="desc">Wardrobe placeholder illustration for a collector satin dress.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f3ece8" />
+      <stop offset="100%" stop-color="#cdb6b0" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)" />
+  <rect x="78" y="78" width="644" height="844" rx="42" fill="#fffaf4" stroke="#d9c8c1" stroke-width="4" />
+  <path d="M316 258h168l42 132H274l42-132Z" fill="#e0c7c4" />
+  <path d="M256 410c54-22 102-34 144-34s90 12 144 34l-42 262H298l-42-262Z" fill="#f4ece8" />
+  <circle cx="400" cy="330" r="18" fill="#bdae9c" />
+  <text x="108" y="168" fill="#847d63" font-size="28" font-family="Trebuchet MS, sans-serif" letter-spacing="5">WARDROBE PIECE</text>
+  <text x="108" y="832" fill="#192021" font-size="56" font-family="Georgia, serif">Satin Keepsake Dress</text>
+  <text x="108" y="882" fill="#5c645d" font-size="28" font-family="Trebuchet MS, sans-serif">Full garment silhouette</text>
+</svg>

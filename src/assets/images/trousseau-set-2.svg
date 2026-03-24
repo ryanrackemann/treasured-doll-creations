@@ -1,0 +1,19 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Miniature Trousseau Set Detail</title>
+  <desc id="desc">Close-up placeholder illustration of the miniature linens and ribbon storage.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f6f3ed" />
+      <stop offset="100%" stop-color="#e0d8cc" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)" />
+  <rect x="78" y="78" width="644" height="844" rx="42" fill="#fffaf4" stroke="#dbd5ca" stroke-width="4" />
+  <rect x="244" y="344" width="312" height="220" rx="28" fill="#f2ebdf" stroke="#cdbfb0" stroke-width="8" />
+  <path d="M400 344v220" stroke="#bdae9c" stroke-width="10" />
+  <path d="M244 454h312" stroke="#bdae9c" stroke-width="10" />
+  <circle cx="400" cy="454" r="26" fill="#847d63" />
+  <text x="108" y="168" fill="#847d63" font-size="28" font-family="Trebuchet MS, sans-serif" letter-spacing="5">RIBBON STORAGE DETAIL</text>
+  <text x="108" y="832" fill="#192021" font-size="56" font-family="Georgia, serif">Miniature Trousseau Set</text>
+  <text x="108" y="882" fill="#5c645d" font-size="28" font-family="Trebuchet MS, sans-serif">Keepsake box close-up</text>
+</svg>

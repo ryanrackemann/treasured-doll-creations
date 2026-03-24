@@ -1,0 +1,109 @@
+.gallery {
+  display: grid;
+  gap: 1rem;
+}
+
+.gallery__frame {
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+}
+
+.gallery__main-button {
+  padding: 0;
+  border: 0;
+  background: transparent;
+  overflow: hidden;
+  border-radius: 1.4rem;
+}
+
+.gallery__main-button img {
+  width: 100%;
+  aspect-ratio: 4 / 5;
+  object-fit: cover;
+}
+
+.gallery__controls {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 0.75rem;
+}
+
+.gallery__controls span {
+  color: rgba(25, 32, 33, 0.72);
+}
+
+.gallery__thumbs {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(5rem, 1fr));
+  gap: 0.75rem;
+}
+
+.gallery__thumbs button {
+  padding: 0.2rem;
+  border-radius: 1rem;
+  border: 1px solid rgba(25, 32, 33, 0.1);
+  background: rgba(255, 255, 255, 0.82);
+}
+
+.gallery__thumbs button.is-active {
+  border-color: #847d63;
+  box-shadow: 0 0 0 2px rgba(132, 125, 99, 0.16);
+}
+
+.gallery__thumbs img {
+  width: 100%;
+  aspect-ratio: 1;
+  object-fit: cover;
+  border-radius: 0.8rem;
+}
+
+.lightbox {
+  position: fixed;
+  inset: 0;
+  z-index: 40;
+  display: grid;
+  place-items: center;
+  padding: 1rem;
+  background: rgba(25, 32, 33, 0.78);
+}
+
+.lightbox__dialog {
+  width: min(100%, 72rem);
+  display: grid;
+  gap: 1rem;
+  padding: 1rem;
+  border-radius: 1.5rem;
+  background: rgba(247, 242, 235, 0.98);
+}
+
+.lightbox__toolbar,
+.lightbox__content {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+  justify-content: space-between;
+}
+
+.lightbox__toolbar p {
+  margin-bottom: 0;
+}
+
+.lightbox__content img {
+  flex: 1;
+  min-width: 0;
+  max-height: 78vh;
+  object-fit: contain;
+  border-radius: 1rem;
+}
+
+@media (max-width: 767px) {
+  .lightbox__content {
+    flex-direction: column;
+  }
+
+  .lightbox__content button {
+    width: 100%;
+  }
+}

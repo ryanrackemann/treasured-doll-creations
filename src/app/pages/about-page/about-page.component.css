@@ -1,0 +1,45 @@
+.about-page__stack,
+.about-page__grid {
+  display: grid;
+  gap: 1.5rem;
+}
+
+.about-page__hero,
+.about-card,
+.about-page__note {
+  display: grid;
+  gap: 1rem;
+  padding: 1.4rem;
+}
+
+.about-page__hero h1,
+.about-card h2 {
+  margin-bottom: 0;
+}
+
+.about-page__hero p:last-child,
+.about-card p,
+.about-page__note p:last-child {
+  margin-bottom: 0;
+}
+
+.about-page__actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.85rem;
+}
+
+@media (min-width: 768px) {
+  .about-page__hero {
+    grid-template-columns: minmax(0, 1.2fr) auto;
+    align-items: end;
+  }
+
+  .about-page__actions {
+    justify-content: end;
+  }
+
+  .about-page__grid {
+    grid-template-columns: repeat(3, minmax(0, 1fr));
+  }
+}

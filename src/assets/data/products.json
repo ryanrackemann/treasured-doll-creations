@@ -1,0 +1,115 @@
+[
+  {
+    "id": "rose-heirloom-porcelain-doll",
+    "title": "Rose Heirloom Porcelain Doll",
+    "shortDescription": "Hand-detailed porcelain doll with a rose-toned costume and cabinet-ready silhouette.",
+    "description": "A graceful showcase piece with painted lashes, softly blushed cheeks, and gathered skirt layers that photograph beautifully in both shelves and collector cabinets.",
+    "category": "Dolls",
+    "material": "Porcelain",
+    "condition": "Excellent vintage condition",
+    "era": "1940s inspired",
+    "dimensions": "18 in. tall",
+    "tags": ["Hand-painted face", "Display stand included", "Layered lace trim"],
+    "images": [
+      "assets/images/rose-heirloom-1.svg",
+      "assets/images/rose-heirloom-2.svg"
+    ],
+    "price": 168,
+    "featured": true,
+    "marketplaceLinks": {
+      "ebay": "https://www.ebay.com/sch/i.html?_nkw=rose+heirloom+porcelain+doll",
+      "poshmark": "https://poshmark.com/search?query=rose%20heirloom%20porcelain%20doll"
+    }
+  },
+  {
+    "id": "violet-parlor-bonnet",
+    "title": "Violet Parlor Bonnet",
+    "shortDescription": "Collector bonnet with velvet ribbon accents and fine lace framing details.",
+    "description": "An accessory piece built for styling antique dolls or enriching flat-lay product photography, with soft violet ribboning and a structured vintage brim.",
+    "category": "Accessories",
+    "material": "Lace and Velvet",
+    "condition": "Very good vintage condition",
+    "era": "1930s inspired",
+    "dimensions": "8 in. wide",
+    "tags": ["Velvet ties", "Soft wired brim", "Display-ready accessory"],
+    "images": ["assets/images/violet-bonnet-1.svg", "assets/images/violet-bonnet-2.svg"],
+    "price": 64,
+    "marketplaceLinks": {
+      "ebay": "https://www.ebay.com/sch/i.html?_nkw=violet+parlor+bonnet",
+      "depop": "https://www.depop.com/search/?q=violet%20parlor%20bonnet"
+    }
+  },
+  {
+    "id": "velvet-parlor-bear",
+    "title": "Velvet Parlor Bear",
+    "shortDescription": "Soft mohair companion with velvet bow and restored collector presentation.",
+    "description": "This warm-toned companion adds charm beside doll displays, with a gentle expression, restored fur texture, and a bow finish that feels true to parlor styling.",
+    "category": "Companions",
+    "material": "Mohair",
+    "condition": "Restored display condition",
+    "era": "1950s inspired",
+    "dimensions": "11 in. seated",
+    "tags": ["Mohair finish", "Restored seams", "Velvet collar bow"],
+    "images": ["assets/images/velvet-bear-1.svg", "assets/images/velvet-bear-2.svg"],
+    "price": 112,
+    "featured": true,
+    "marketplaceLinks": {
+      "ebay": "https://www.ebay.com/sch/i.html?_nkw=velvet+parlor+bear",
+      "poshmark": "https://poshmark.com/search?query=velvet%20parlor%20bear"
+    }
+  },
+  {
+    "id": "heirloom-display-stand",
+    "title": "Heirloom Display Stand",
+    "shortDescription": "Walnut-toned stand with brass-inspired details for cabinet or tabletop presentation.",
+    "description": "A simple but elevated display base that lifts collectible pieces visually, making product photography and marketplace presentation cleaner and more consistent.",
+    "category": "Display Pieces",
+    "material": "Walnut and Brass",
+    "condition": "Excellent display condition",
+    "era": "Classic reproduction",
+    "dimensions": "12 in. base width",
+    "tags": ["Stable base", "Warm walnut finish", "Photo-friendly display lift"],
+    "images": ["assets/images/display-stand-1.svg", "assets/images/display-stand-2.svg"],
+    "price": 48,
+    "marketplaceLinks": {
+      "ebay": "https://www.ebay.com/sch/i.html?_nkw=heirloom+display+stand"
+    }
+  },
+  {
+    "id": "satin-keepsake-dress",
+    "title": "Satin Keepsake Dress",
+    "shortDescription": "Collector wardrobe piece with satin drape, structured bodice, and pearl-toned trim.",
+    "description": "Designed to refresh a display wardrobe with elegant volume, the dress balances soft sheen with vintage-inspired tailoring for a polished presentation.",
+    "category": "Wardrobe",
+    "material": "Satin",
+    "condition": "Excellent reproduction condition",
+    "era": "1920s inspired",
+    "dimensions": "Fits 18 in. display dolls",
+    "tags": ["Pearl trim", "Structured bodice", "Collector wardrobe piece"],
+    "images": ["assets/images/keepsake-dress-1.svg", "assets/images/keepsake-dress-2.svg"],
+    "price": 82,
+    "featured": true,
+    "marketplaceLinks": {
+      "poshmark": "https://poshmark.com/search?query=satin%20keepsake%20dress",
+      "depop": "https://www.depop.com/search/?q=satin%20keepsake%20dress"
+    }
+  },
+  {
+    "id": "miniature-trousseau-set",
+    "title": "Miniature Trousseau Set",
+    "shortDescription": "Cotton set with folded linens, ribbon closures, and display-friendly storage details.",
+    "description": "A charming grouped collectible that adds narrative to a display scene, with neatly folded pieces, stitched edging, and soft neutral tones.",
+    "category": "Sets",
+    "material": "Cotton",
+    "condition": "Excellent curated condition",
+    "era": "Vintage inspired",
+    "dimensions": "6 piece miniature set",
+    "tags": ["Miniature linens", "Ribbon storage box", "Display storytelling piece"],
+    "images": ["assets/images/trousseau-set-1.svg", "assets/images/trousseau-set-2.svg"],
+    "price": 96,
+    "marketplaceLinks": {
+      "ebay": "https://www.ebay.com/sch/i.html?_nkw=miniature+trousseau+set",
+      "depop": "https://www.depop.com/search/?q=miniature%20trousseau%20set"
+    }
+  }
+]

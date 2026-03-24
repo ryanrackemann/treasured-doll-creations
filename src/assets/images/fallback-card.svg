@@ -1,0 +1,17 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 800 1000" role="img" aria-labelledby="title desc">
+  <title id="title">Catalog placeholder</title>
+  <desc id="desc">Neutral placeholder card for collectible inventory.</desc>
+  <defs>
+    <linearGradient id="bg" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#f8f2ea" />
+      <stop offset="100%" stop-color="#d9d0c4" />
+    </linearGradient>
+  </defs>
+  <rect width="800" height="1000" fill="url(#bg)" />
+  <rect x="72" y="72" width="656" height="856" rx="40" fill="#fffaf4" stroke="#cfc3b3" stroke-width="4" />
+  <circle cx="400" cy="350" r="90" fill="#bdae9c" opacity="0.75" />
+  <rect x="250" y="470" width="300" height="180" rx="90" fill="#949e94" opacity="0.75" />
+  <text x="100" y="180" fill="#847d63" font-size="30" font-family="Trebuchet MS, sans-serif" letter-spacing="6">TREASURED DOLL CREATIONS</text>
+  <text x="100" y="820" fill="#192021" font-size="54" font-family="Georgia, serif">Collection Image</text>
+  <text x="100" y="872" fill="#5c645d" font-size="28" font-family="Trebuchet MS, sans-serif">Add live photography here when inventory is ready.</text>
+</svg>
