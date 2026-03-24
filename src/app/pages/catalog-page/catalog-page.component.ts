@@ -10,6 +10,7 @@ import {
 } from '../../core/models/catalog-filters.model';
 import { Product } from '../../core/models/product.model';
 import { ProductService } from '../../core/services/product.service';
+import { SeoService } from '../../core/services/seo.service';
 import { CatalogFiltersComponent } from '../../shared/catalog-filters/catalog-filters.component';
 import { LoadingSpinnerComponent } from '../../shared/loading-spinner/loading-spinner.component';
 import { ProductCardComponent } from '../../shared/product-card/product-card.component';
@@ -31,6 +32,7 @@ export class CatalogPageComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly router = inject(Router);
   private readonly productService = inject(ProductService);
+  private readonly seoService = inject(SeoService);
   private readonly destroyRef = inject(DestroyRef);
 
   readonly products = signal<Product[]>([]);
@@ -86,7 +88,18 @@ export class CatalogPageComponent implements OnInit {
 
   ngOnInit(): void {
     this.route.queryParamMap.pipe(takeUntilDestroyed(this.destroyRef)).subscribe((params) => {
-      this.filters.set(filtersFromQuery(params));
+      const filters = filtersFromQuery(params);
+
+      this.filters.set(filters);
+      this.seoService.updatePage({
+        title: filters.search
+          ? `Catalog Results for "${filters.search}" | Treasured Doll Creations`
+          : 'Catalog | Treasured Doll Creations Antique & Vintage Collectibles',
+        description: filters.search
+          ? `Browse catalog results for "${filters.search}" across antique and vintage collectibles, heirloom accents, nostalgic decor, and display-ready finds.`
+          : 'Browse the Treasured Doll Creations catalog of antique and vintage collectibles, heirloom accents, nostalgic decor, and display-ready finds.',
+        path: buildCatalogPath(filters)
+      });
     });
 
     this.loadProducts();
@@ -166,4 +179,28 @@ function queryParamsFromFilters(filters: CatalogFilters): Record<string, string 
 
 function isMarketplaceValue(value: string): value is CatalogFilters['marketplace'] {
   return value === 'all' || value === 'ebay' || value === 'poshmark' || value === 'depop';
+}
+
+function buildCatalogPath(filters: CatalogFilters): string {
+  const params = new URLSearchParams();
+
+  if (filters.search) {
+    params.set('search', filters.search);
+  }
+
+  if (filters.category !== 'all') {
+    params.set('category', filters.category);
+  }
+
+  if (filters.material !== 'all') {
+    params.set('material', filters.material);
+  }
+
+  if (filters.marketplace !== 'all') {
+    params.set('marketplace', filters.marketplace);
+  }
+
+  const query = params.toString();
+
+  return query ? `/catalog?${query}` : '/catalog';
 }

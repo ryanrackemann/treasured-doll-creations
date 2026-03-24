@@ -1,6 +1,8 @@
 import { CommonModule } from '@angular/common';
-import { Component } from '@angular/core';
+import { Component, OnInit, inject } from '@angular/core';
 import { RouterLink } from '@angular/router';
+
+import { SeoService } from '../../core/services/seo.service';
 
 interface AboutCard {
   title: string;
@@ -9,14 +11,14 @@ interface AboutCard {
 
 const ABOUT_CARDS: AboutCard[] = [
   {
-    title: 'Collector-focused presentation',
+    title: 'Vintage-first presentation',
     description:
-      'Imagery, descriptive copy, and supporting details are organized to help collectors evaluate each piece quickly.'
+      'Imagery, descriptive copy, and supporting details are organized to help visitors evaluate antique and vintage pieces quickly.'
   },
   {
-    title: 'Marketplace-driven conversion',
+    title: 'Catalog-led conversion',
     description:
-      'The website is a discovery layer, so every item still links outward to the marketplace where the live listing exists.'
+      'The website is built for browsing and discovery, while each item still links outward to the marketplace where the live listing exists.'
   },
   {
     title: 'Simple, scalable architecture',
@@ -32,6 +34,17 @@ const ABOUT_CARDS: AboutCard[] = [
   templateUrl: './about-page.component.html',
   styleUrl: './about-page.component.css'
 })
-export class AboutPageComponent {
+export class AboutPageComponent implements OnInit {
+  private readonly seoService = inject(SeoService);
+
   readonly aboutCards = ABOUT_CARDS;
+
+  ngOnInit(): void {
+    this.seoService.updatePage({
+      title: 'About Treasured Doll Creations | Antique & Vintage Collectibles',
+      description:
+        'Learn about Treasured Doll Creations and its focus on curated antique and vintage collectibles, heirloom accents, and a catalog-first browsing experience.',
+      path: '/about'
+    });
+  }
 }

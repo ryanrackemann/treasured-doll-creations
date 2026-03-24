@@ -3,7 +3,7 @@ import { Routes } from '@angular/router';
 export const routes: Routes = [
   {
     path: '',
-    title: 'Treasured Doll Creations | Landing',
+    title: 'Treasured Doll Creations | Antique & Vintage Collectibles',
     loadComponent: () =>
       import('./pages/landing-page/landing-page.component').then(
         (module) => module.LandingPageComponent

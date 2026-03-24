@@ -6,6 +6,7 @@ import { catchError, distinctUntilChanged, map, of, switchMap, tap } from 'rxjs'
 
 import { Product } from '../../core/models/product.model';
 import { ProductService } from '../../core/services/product.service';
+import { SeoService } from '../../core/services/seo.service';
 import { getMarketplaceEntries } from '../../core/utils/marketplace.utils';
 import { LoadingSpinnerComponent } from '../../shared/loading-spinner/loading-spinner.component';
 import { ProductGalleryComponent } from '../../shared/product-gallery/product-gallery.component';
@@ -20,6 +21,7 @@ import { ProductGalleryComponent } from '../../shared/product-gallery/product-ga
 export class ProductDetailPageComponent implements OnInit {
   private readonly route = inject(ActivatedRoute);
   private readonly productService = inject(ProductService);
+  private readonly seoService = inject(SeoService);
   private readonly destroyRef = inject(DestroyRef);
 
   readonly product = signal<Product | null>(null);
@@ -56,12 +58,26 @@ export class ProductDetailPageComponent implements OnInit {
 
         if (product) {
           this.product.set(product);
+          this.seoService.updatePage({
+            title: `${product.title} | Treasured Doll Creations`,
+            description: product.shortDescription,
+            path: `/product/${product.id}`,
+            type: 'product'
+          });
           return;
         }
 
         if (!this.errorMessage()) {
           this.errorMessage.set('This collectible could not be found in the current catalog.');
         }
+
+        this.seoService.updatePage({
+          title: 'Item Not Found | Treasured Doll Creations',
+          description:
+            'The requested antique or vintage item could not be found in the Treasured Doll Creations catalog.',
+          path: `/${this.route.snapshot.url.map((segment) => segment.path).join('/')}`,
+          robots: 'noindex,follow'
+        });
       });
   }
 }

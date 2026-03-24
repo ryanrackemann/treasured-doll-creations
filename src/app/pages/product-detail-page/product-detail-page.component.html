@@ -4,7 +4,7 @@
 
     <app-loading-spinner
       *ngIf="isLoading()"
-      label="Loading collectible details"
+      label="Loading item details"
     ></app-loading-spinner>
 
     <div class="detail-page__message surface-card" *ngIf="errorMessage() as error">
@@ -24,7 +24,7 @@
 
         <div class="detail-page__price-row">
           <strong>{{ product.price | currency: 'USD' : 'symbol' : '1.0-0' }}</strong>
-          <span>Completed on external marketplaces</span>
+          <span>Available through external listings</span>
         </div>
 
         <p>{{ product.description }}</p>
@@ -59,15 +59,10 @@
             target="_blank"
             rel="noreferrer"
             role="button"
-          >
-            View on {{ marketplace.label }}
-          </a>
+          >View listing on {{ marketplace.label }}</a>
         </div>
 
-        <p class="detail-page__note">
-          This site is a discovery layer only, so checkout always finishes on the chosen
-          marketplace.
-        </p>
+        <p class="detail-page__note">This website serves as a catalog, so purchases always finish on the selected external marketplace.</p>
       </aside>
     </div>
   </div>

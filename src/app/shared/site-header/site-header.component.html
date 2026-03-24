@@ -1,17 +1,24 @@
 <header class="site-header" id="top">
   <div class="shell site-header__bar">
     <a class="brand" routerLink="/" (click)="closeMenu()">
-      <span class="brand__mark" aria-hidden="true">TDC</span>
+      <span class="brand__mark" aria-hidden="true">
+        <svg class="brand__glyph" viewBox="0 0 64 64" focusable="false">
+          <rect x="8" y="8" width="48" height="48" rx="14"></rect>
+          <path d="M20 20h24"></path>
+          <path d="M32 20v24"></path>
+          <path d="M22 44h20"></path>
+          <path d="M20 26h8"></path>
+          <path d="M36 26h8"></path>
+        </svg>
+      </span>
       <span class="brand__copy">
         <strong>Treasured Doll Creations</strong>
-        <small>Collector catalog</small>
+        <small>Antique & vintage collectibles</small>
       </span>
     </a>
 
     <nav class="site-nav site-nav--desktop" aria-label="Primary">
-      <a *ngFor="let link of navLinks" [routerLink]="link.path" [fragment]="link.fragment">
-        {{ link.label }}
-      </a>
+      <a *ngFor="let link of navLinks" [routerLink]="link.path" [fragment]="link.fragment">{{ link.label }}</a>
     </nav>
 
     <button
@@ -21,8 +28,7 @@
       [attr.aria-expanded]="menuOpen()"
       (click)="toggleMenu()"
     >
-      <span class="visually-hidden">Toggle navigation</span>
-      {{ menuOpen() ? 'Close' : 'Menu' }}
+      <span class="visually-hidden">Toggle navigation</span><span>{{ menuOpen() ? 'Close' : 'Menu' }}</span>
     </button>
   </div>
 </header>
@@ -37,13 +43,8 @@
         [routerLink]="link.path"
         [fragment]="link.fragment"
         (click)="closeMenu()"
-      >
-        {{ link.label }}
-      </a>
+      >{{ link.label }}</a>
     </nav>
-    <p class="mobile-nav__note">
-      Start with the landing page, learn more about the brand, or head straight into the
-      catalog when you are ready to browse.
-    </p>
+    <p class="mobile-nav__note">Explore the brand story, browse the antique and vintage catalog, and open the listing that best matches the piece you want.</p>
   </div>
 </div>

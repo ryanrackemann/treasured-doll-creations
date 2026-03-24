@@ -1,23 +1,21 @@
 <div class="filters-panel surface-card">
   <div class="filters-panel__header">
     <div>
-      <p class="eyebrow">Filter the catalog</p>
+      <p class="eyebrow">Refine the catalog</p>
     </div>
     <button
       type="button"
       class="secondary outline"
       (click)="reset()"
       [disabled]="!hasActiveFilters"
-    >
-      Clear filters
-    </button>
+    >Clear filters</button>
   </div>
   
   <label>
-    Search
+    <span>Search</span>
     <input
       type="search"
-      placeholder="Search by title or description"
+      placeholder="Search by title, material, or description"
       [ngModel]="draftFilters.search"
       (ngModelChange)="updateFilters({ search: $event })"
     >
@@ -26,7 +24,7 @@
   <div class="filters-grid">
 
     <label>
-      Category
+      <span>Category</span>
       <select
         [ngModel]="draftFilters.category"
         (ngModelChange)="updateFilters({ category: $event })"
@@ -37,7 +35,7 @@
     </label>
 
     <label>
-      Material
+      <span>Material</span>
       <select
         [ngModel]="draftFilters.material"
         (ngModelChange)="updateFilters({ material: $event })"
@@ -48,14 +46,12 @@
     </label>
 
     <label>
-      Marketplace
+      <span>Marketplace</span>
       <select
         [ngModel]="draftFilters.marketplace"
         (ngModelChange)="updateFilters({ marketplace: $event })"
       >
-        <option *ngFor="let option of marketplaceOptions" [value]="option.value">
-          {{ option.label }}
-        </option>
+        <option *ngFor="let option of marketplaceOptions" [value]="option.value">{{ option.label }}</option>
       </select>
     </label>
   </div>

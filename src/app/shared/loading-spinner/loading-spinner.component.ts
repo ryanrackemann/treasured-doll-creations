@@ -7,5 +7,5 @@ import { Component, Input } from '@angular/core';
   styleUrl: './loading-spinner.component.css'
 })
 export class LoadingSpinnerComponent {
-  @Input() label = 'Loading the collection';
+  @Input() label = 'Loading the catalog';
 }
