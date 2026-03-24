@@ -64,26 +64,13 @@ main, footer {
   z-index: 1;
 }
 
-h1,
-h2,
-h3,
-h4 {
+h1, h2, h3, h4 {
   font-family: "Iowan Old Style", "Palatino Linotype", "Book Antiqua", Georgia, serif;
   letter-spacing: -0.03em;
   color: var(--ink-950);
 }
 
-p,
-a,
-button,
-label,
-input,
-select,
-small,
-span,
-li,
-dd,
-dt {
+p, a, button, label, input, select, small, span, li, dd, dt {
   font-family: "Avenir Next", "Trebuchet MS", "Segoe UI", sans-serif;
 }
 
