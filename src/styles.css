@@ -23,8 +23,12 @@
   --pico-card-background-color: rgba(255, 251, 247, 0.82) !important;
 }
 
+input, select {
+  --pico-color: var(--ink-950) !important;
+}
+
 h1, h2 {
-  --pico-typography-spacing-top: 2rem !important;
+  --pico-typography-spacing-top: 1rem !important;
 }
 
 html {
@@ -54,9 +58,7 @@ body::before {
   pointer-events: none;
 }
 
-main,
-header,
-footer {
+main, footer {
   padding-top: 2rem;
   position: relative;
   z-index: 1;
@@ -106,7 +108,7 @@ img {
 
 .section-heading {
   display: grid;
-  gap: 0.55rem;
+  gap: 1rem;
   margin-bottom: 1.4rem;
 }
 

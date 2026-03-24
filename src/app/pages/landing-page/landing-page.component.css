@@ -6,7 +6,7 @@
 
 .landing-hero__copy {
   display: grid;
-  gap: 1.5rem;
+  gap: 1rem;
 }
 
 .landing-hero__lead,
@@ -17,7 +17,7 @@
 .landing-search,
 .landing-hero__panel,
 .landing-brand {
-  padding: 1.4rem;
+  padding: 1rem;
 }
 
 .landing-search {
