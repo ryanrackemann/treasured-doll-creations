@@ -68,10 +68,14 @@
   margin: 0;
 }
 
-.detail-page__tags,
-.detail-page__actions {
+.detail-page__tags {
   display: flex;
   flex-wrap: wrap;
+  gap: 0.75rem;
+}
+
+.detail-page__actions {
+  display: grid;
   gap: 0.75rem;
 }
 
@@ -80,6 +84,106 @@
   border-radius: 999px;
   background: rgba(148, 158, 148, 0.14);
   font-size: 0.9rem;
+}
+
+.marketplace-button {
+  display: flex;
+  align-items: center;
+  gap: 0.9rem;
+  padding: 0.9rem 1rem;
+  border: 1px solid rgba(25, 32, 33, 0.12);
+  border-radius: 1.2rem;
+  background: rgba(255, 255, 255, 0.88);
+  color: #192021;
+  text-decoration: none;
+  box-shadow: 0 16px 30px rgba(25, 32, 33, 0.08);
+  transition:
+    transform 180ms ease,
+    box-shadow 180ms ease,
+    border-color 180ms ease;
+}
+
+.marketplace-button:hover,
+.marketplace-button:focus-visible {
+  color: #192021;
+  transform: translateY(-1px);
+  box-shadow: 0 20px 34px rgba(25, 32, 33, 0.12);
+}
+
+.marketplace-button__icon {
+  display: grid;
+  place-items: center;
+  inline-size: 2.75rem;
+  block-size: 2.75rem;
+  border-radius: 0.95rem;
+  font-size: 1.1rem;
+  font-weight: 800;
+  line-height: 1;
+  letter-spacing: -0.04em;
+  flex-shrink: 0;
+}
+
+.marketplace-button__copy {
+  display: grid;
+  gap: 0.08rem;
+}
+
+.marketplace-button__eyebrow {
+  font-size: 0.72rem;
+  font-weight: 700;
+  letter-spacing: 0.12em;
+  text-transform: uppercase;
+  color: rgba(25, 32, 33, 0.64);
+}
+
+.marketplace-button__label {
+  font-size: 1rem;
+  font-weight: 700;
+}
+
+.marketplace-button--ebay {
+  background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(245, 248, 255, 0.94));
+  border-color: rgba(0, 100, 210, 0.14);
+}
+
+.marketplace-button--ebay .marketplace-button__icon {
+  background: linear-gradient(135deg, #e53238 0%, #f5af02 35%, #86b817 68%, #0064d2 100%);
+  color: #fff;
+}
+
+.marketplace-button--ebay:hover,
+.marketplace-button--ebay:focus-visible {
+  border-color: rgba(0, 100, 210, 0.28);
+}
+
+.marketplace-button--poshmark {
+  background: linear-gradient(180deg, rgba(255, 248, 251, 0.96), rgba(251, 237, 244, 0.94));
+  border-color: rgba(136, 73, 95, 0.16);
+}
+
+.marketplace-button--poshmark .marketplace-button__icon {
+  background: linear-gradient(180deg, #8d4a63, #6f384d);
+  color: #fff;
+}
+
+.marketplace-button--poshmark:hover,
+.marketplace-button--poshmark:focus-visible {
+  border-color: rgba(136, 73, 95, 0.28);
+}
+
+.marketplace-button--depop {
+  background: linear-gradient(180deg, rgba(247, 248, 248, 0.96), rgba(234, 236, 236, 0.94));
+  border-color: rgba(25, 32, 33, 0.14);
+}
+
+.marketplace-button--depop .marketplace-button__icon {
+  background: linear-gradient(180deg, #192021, #2b3638);
+  color: #fff;
+}
+
+.marketplace-button--depop:hover,
+.marketplace-button--depop:focus-visible {
+  border-color: rgba(25, 32, 33, 0.26);
 }
 
 @media (min-width: 768px) {

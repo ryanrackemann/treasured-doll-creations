@@ -3,13 +3,9 @@ name: Build and Deploy
 on:
   push:
     branches: [main]
-  pull_request:
-    branches: [main]
 
 permissions:
   contents: write
-  pages: write
-  id-token: write
 
 jobs:
   build-and-deploy:
@@ -27,10 +23,13 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run build:prod
+        run: ng build --configuration production --base-href /treasured-doll-creations/
+
+      - name: Add 404 fallback
+        run: cp dist/treasured-doll-creations/browser/index.html dist/treasured-doll-creations/browser/404.html
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/treasured-doll-creations
+          publish_dir: ./dist/treasured-doll-creations/browser

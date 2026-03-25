@@ -55,14 +55,20 @@
         <div class="detail-page__actions">
           <a
             *ngFor="let marketplace of marketplaceEntries()"
+            class="marketplace-button"
+            [ngClass]="'marketplace-button--' + marketplace.key"
             [href]="marketplace.url"
             target="_blank"
             rel="noreferrer"
-            role="button"
-          >Open listing on {{ marketplace.label }}</a>
+            [attr.aria-label]="'Open ' + marketplace.label + ' listing for ' + product.title"
+          >
+            <span class="marketplace-button__icon" aria-hidden="true">{{ marketplace.monogram }}</span>
+            <span class="marketplace-button__copy">
+              <span class="marketplace-button__eyebrow">Open on</span>
+              <span class="marketplace-button__label">{{ marketplace.label }}</span>
+            </span>
+          </a>
         </div>
-
-        <p class="detail-page__note">Our products are hosted across multiple marketplaces, so please use the link above to continue.</p>
       </aside>
     </div>
   </div>

@@ -28,15 +28,24 @@
       <span *ngFor="let marketplace of marketplaces">{{ marketplace.label }}</span>
     </div>
 
-    <div class="product-card__actions">
+    <div class="product-card__actions" [class.product-card__actions--single]="!primaryMarketplace">
       <a [routerLink]="['/product', product.id]" class="secondary" role="button">View product</a>
       <a
         *ngIf="primaryMarketplace"
         [href]="primaryMarketplace.url"
         target="_blank"
         rel="noreferrer"
-        role="button"
-      >Open marketplace</a>
+        class="product-card__marketplace-button"
+        [attr.aria-label]="'Open ' + primaryMarketplace.label + ' listing for ' + product.title"
+        [attr.title]="'Open ' + primaryMarketplace.label + ' listing'"
+      >
+        <svg viewBox="0 0 24 24" aria-hidden="true" focusable="false">
+          <circle cx="9" cy="19" r="1.7"></circle>
+          <circle cx="18" cy="19" r="1.7"></circle>
+          <path d="M3 4h2.4l2.1 9.1a1 1 0 0 0 1 .8h8.7a1 1 0 0 0 1-.8L20 8H7.2"></path>
+        </svg>
+        <span class="visually-hidden">Open marketplace listing</span>
+      </a>
     </div>
   </div>
 </div>

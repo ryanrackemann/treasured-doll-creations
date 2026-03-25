@@ -16,9 +16,10 @@
     </div>
   </div>
 
-  <div class="gallery__thumbs" *ngIf="product.images.length > 1">
+  @if (product.images.length > 1) {
+  <div class="gallery__thumbs">
+    @for (image of product.images; track image; let index = $index) {
     <button
-      *ngFor="let image of product.images; let index = index"
       type="button"
       [class.is-active]="index === activeIndex()"
       [attr.aria-label]="'View image ' + (index + 1)"
@@ -26,10 +27,13 @@
     >
       <img [src]="image" [alt]="product.title + ' image ' + (index + 1)">
     </button>
+    }
   </div>
+  }
 </div>
 
-<div class="lightbox" *ngIf="lightboxOpen()" (click)="closeLightbox()">
+@if (lightboxOpen()) {
+<div class="lightbox" (click)="closeLightbox()">
   <div
     class="lightbox__dialog"
     role="dialog"
@@ -49,3 +53,4 @@
     </div>
   </div>
 </div>
+}
