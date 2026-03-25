@@ -26,6 +26,13 @@
               "outputHashing": "all",
               "sourceMap": false
             },
+            "github-pages": {
+              "optimization": true,
+              "outputHashing": "all",
+              "sourceMap": false,
+              "baseHref": "/treasured-doll-creations/",
+              "deployUrl": "/treasured-doll-creations/"
+            },
             "development": {
               "optimization": false,
               "sourceMap": true
