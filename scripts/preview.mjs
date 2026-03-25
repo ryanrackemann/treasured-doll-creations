@@ -5,7 +5,7 @@ import { extname, join, resolve } from 'node:path';
 
 const host = '127.0.0.1';
 const port = Number(process.env.PORT || 4173);
-const rootDir = resolve('dist/treasured-doll-creations/browser');
+const rootDir = resolve('dist/treasured-doll-creations');
 const indexPath = join(rootDir, 'index.html');
 
 if (!existsSync(indexPath)) {

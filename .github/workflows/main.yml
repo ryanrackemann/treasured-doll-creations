@@ -23,13 +23,16 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: npm run deploy
+        run: ng build --configuration production --base-href /treasured-doll-creations/
 
       - name: Add 404 fallback
-        run: cp dist/treasured-doll-creations/browser/index.html dist/treasured-doll-creations/browser/404.html
+        run: cp dist/treasured-doll-creations/index.html dist/treasured-doll-creations/404.html
+
+      - name: Add CNAME
+        run: echo "www.ryanrackemann.com" > dist/treasured-doll-creations/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./dist/treasured-doll-creations/browser
+          publish_dir: ./dist/treasured-doll-creations
