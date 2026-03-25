@@ -23,7 +23,7 @@ jobs:
         run: npm ci
 
       - name: Build Angular app
-        run: ng build --configuration production --base-href /treasured-doll-creations/
+        run: npm run deploy
 
       - name: Add 404 fallback
         run: cp dist/treasured-doll-creations/index.html dist/treasured-doll-creations/404.html
